@@ -52,27 +52,32 @@ function NavbarSection({ executeScroll }) {
           >
             Activities
           </a>
-          <a
-            href="/About"
-            onClick={() => nav('/about')}
-            className="text-black font-outfit hover:text-gray-600"
-          >
-            About
-          </a>
+          <div onClick={() => nav('/about')} className="cursor-pointer">
+            <a
+              
+              className="text-black font-outfit hover:text-gray-600"
+            >
+              About
+            </a>
+          </div>
+          
           {/* <a
             href="/#Contact"
             onClick={() => executeScroll("Contact")}
             className="text-black font-outfit hover:text-gray-600"
           >
             Contact
-          </a> */}
-          <a
-            href="/Contact"
-            onClick={() => nav('/Contact')}
-            className="text-black font-outfit hover:text-gray-600"
-          >
-            Contact
-          </a> 
+          </a> */} 
+          <div onClick={() => nav('/contact')} className="cursor-pointer">
+            <a
+              // href="/Contact"
+              
+              className="text-black font-outfit hover:text-gray-600"
+            >
+              Contact
+            </a>
+          </div>
+           
         </div>
 
         {/* <div className="hidden md:flex space-x-4">

@@ -49,7 +49,7 @@ function Home() {
   
   return (
     <div>
-      <div className="md:flex flex-col ">
+      <div className="md:flex flex-col w-[100%] overflow-hidden">
         <NavbarSection executeScroll={executeScroll} />
         <HeroSection HomeRef={HomeRef} />
         <BioSection />
