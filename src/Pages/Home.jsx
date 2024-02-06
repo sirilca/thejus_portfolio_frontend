@@ -7,7 +7,7 @@ import BlogSection from "../components/BlogSection";
 import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/FooterSection";
 import Carousel from "../components/Carousel";
-import ActivitySection from "../components/"
+import ActivitySection from "../components/ActivitySection"
 // import JourneySection from "../components/JourneySection";
 // import MeditationSection from "../components/MeditationSection";
 

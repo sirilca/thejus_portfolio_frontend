@@ -15,7 +15,7 @@ function BlogSection({ MeditationRef }) {
   }, []);
 
   const getAlldata = async () => {
-    await axios.get('http://localhost:443/').then((res) => {
+    await axios.get('https://thejus-joseph.onrender.com').then((res) => {
       setData(res.data[0].blogSection);
       // console.log(res.data[0].blogSection)
     }).catch((error) => {

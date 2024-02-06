@@ -15,7 +15,7 @@ export default function ContactSection({ ContactRef }) {
 
   const contactSubmit = async () => {
     // console.log(email,message,name)
-    await axios.post('http://localhost:443/sendmail', { email, message, name }).then(res=>{
+    await axios.post('https://thejus-joseph.onrender.comsendmail', { email, message, name }).then(res=>{
       // console.log(res.data)
       if(res.data==='success'){
         // nav('/')
