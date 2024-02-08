@@ -3,25 +3,39 @@ import { GoArrowRight } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import jsondat from "../main.json";
 import axios from "axios";
+import { useData } from "./DataContext/DataContext";
 
 function BlogSection({ MeditationRef }) {
 
 
-  // -----------------------------------------importing data-----------------------------------------
+
   const [data, setData] = useState(null);
+  const { alldata } = useData()
+
 
   useEffect(() => {
-    getAlldata()
-  }, []);
+    // getAlldata()
+    if (alldata) {
 
-  const getAlldata = async () => {
-    await axios.get('https://thejus-joseph.onrender.com').then((res) => {
-      setData(res.data[0].blogSection);
-      // console.log(res.data[0].blogSection)
-    }).catch((error) => {
-      console.error('Error fetching data:', error);
-    });
-  }
+      setData(alldata.blogSection)
+    }
+  }, [alldata]);
+
+  // -----------------------------------------importing data-----------------------------------------
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   getAlldata()
+  // }, []);
+
+  // const getAlldata = async () => {
+  //   await axios.get('https://thejus-joseph.onrender.com').then((res) => {
+  //     setData(res.data[0].blogSection);
+  //     // console.log(res.data[0].blogSection)
+  //   }).catch((error) => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }
   //--------------------------------------------------------------------------------------------------
 
 

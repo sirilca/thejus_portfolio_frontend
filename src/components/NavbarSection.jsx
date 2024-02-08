@@ -19,6 +19,7 @@ function NavbarSection({ executeScroll }) {
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -71,7 +72,6 @@ function NavbarSection({ executeScroll }) {
           <div onClick={() => nav('/contact')} className="cursor-pointer">
             <a
               // href="/Contact"
-              
               className="text-black font-outfit hover:text-gray-600"
             >
               Contact

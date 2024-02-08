@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import JoinMailModal from "./JoinMailModal";
 import axios from "axios";
+import { useData } from "./DataContext/DataContext";
 
 function HeroSection({ HomeRef }) {
 
@@ -12,19 +13,25 @@ function HeroSection({ HomeRef }) {
 
   // -----------------------------------------importing data-----------------------------------------
   const [data, setData] = useState(null);
+  const {alldata}=useData()
+
 
   useEffect(() => {
-    getAlldata()
-  }, []);
+    // getAlldata()
+    if(alldata){
 
-  const getAlldata = async () => {
-    await axios.get('https://thejus-joseph.onrender.com').then((res) => {
-      setData(res.data[0].heroSection);
-      // console.log(res.data[0].heroSection)
-    }).catch((error) => {
-      console.error('Error fetching data:', error);
-    });
-  }
+      setData(alldata.heroSection)
+    }
+  }, [alldata]);
+
+  // const getAlldata = async () => {
+  //   await axios.get('https://thejus-joseph.onrender.com').then((res) => {
+  //     setData(res.data[0].heroSection);
+  //     // console.log(res.data[0].heroSection)
+  //   }).catch((error) => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }
   //--------------------------------------------------------------------------------------------------
 
 

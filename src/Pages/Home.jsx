@@ -8,10 +8,13 @@ import ContactSection from "../components/ContactSection";
 import FooterSection from "../components/FooterSection";
 import Carousel from "../components/Carousel";
 import ActivitySection from "../components/ActivitySection"
+import { useData } from "../components/DataContext/DataContext";
 // import JourneySection from "../components/JourneySection";
 // import MeditationSection from "../components/MeditationSection";
 
 function Home() {
+
+
 
   const HomeRef = useRef(null);
   const MeditationRef = useRef(null);

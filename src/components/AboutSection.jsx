@@ -2,24 +2,39 @@ import React, { useEffect, useState } from "react";
 import aboutImg from "../assets/about.png";
 import axios from "axios";
 import jsondat from "../main.json";
+import { useData } from "./DataContext/DataContext";
 
 function AboutSection() {
 
+
+  // const {data} =useData()
   // -------------------------------------------importing data---------------------------------------------
+  // const [data, setData] = useState(null);
+
   const [data, setData] = useState(null);
+  const { alldata } = useData()
+
 
   useEffect(() => {
-    getAlldata()
-  }, []);
+    // getAlldata()
+    if (alldata) {
 
-  const getAlldata=async()=>{
-    await axios.get('https://thejus-joseph.onrender.com').then((res) => {
-      setData(res.data[0].AboutSection);
-      // console.log(res.data[0].AboutSection)
-    }).catch((error) => {
-      console.error('Error fetching data:', error);
-    });
-  }
+      setData(alldata.AboutSection)
+    }
+  }, [alldata]);
+
+  // useEffect(() => {
+  //   getAlldata()
+  // }, []);
+
+  // const getAlldata=async()=>{
+  //   await axios.get('https://thejus-joseph.onrender.com').then((res) => {
+  //     setData(res.data[0].AboutSection);
+  //     // console.log(res.data[0].AboutSection)
+  //   }).catch((error) => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }
 //-----------------------------------------------------------------------------------------------------------------
   // const data = jsondat.AboutSection;
 

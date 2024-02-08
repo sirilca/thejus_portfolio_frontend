@@ -7,24 +7,37 @@ import jsondat from "../main.json";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
+import { useData } from "./DataContext/DataContext";
 
 function BioSection() {
 
-  // -----------------------------------------importing data-----------------------------------------
   const [data, setData] = useState(null);
+  const { alldata } = useData()
+
 
   useEffect(() => {
-    getAlldata()
-  }, []);
+    // getAlldata()
+    if (alldata) {
 
-  const getAlldata = async () => {
-    await axios.get('https://thejus-joseph.onrender.com').then((res) => {
-      setData(res.data[0].biography);
-      // console.log(res.data[0].biography)
-    }).catch((error) => {
-      console.error('Error fetching data:', error);
-    });
-  }
+      setData(alldata.biography)
+    }
+  }, [alldata]);
+
+  // -----------------------------------------importing data-----------------------------------------
+  // const [data, setData] = useState(null);
+
+  // useEffect(() => {
+  //   getAlldata()
+  // }, []);
+
+  // const getAlldata = async () => {
+  //   await axios.get('https://thejus-joseph.onrender.com').then((res) => {
+  //     setData(res.data[0].biography);
+  //     // console.log(res.data[0].biography)
+  //   }).catch((error) => {
+  //     console.error('Error fetching data:', error);
+  //   });
+  // }
   //--------------------------------------------------------------------------------------------------
 
 
