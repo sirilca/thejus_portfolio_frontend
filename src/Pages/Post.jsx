@@ -6,7 +6,7 @@ import { useData } from "../components/DataContext/DataContext";
 
 function Post() {
 
-  const {}=useData()
+  // const {}=useData()
 
   useEffect(() => {
     window.scrollTo({

@@ -15,13 +15,15 @@ function App() {
   }, []);
 
   return (
+    <div>
+      gdfg
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/post" element={<Post />} />
         <Route path="/about" element={<About />} />
-      <Route path="/contact" element={<Contact />} />
-
+      <Route path="/contact" element={<Contact />} />4
       </Routes>
+    </div>
   );
 }
 
