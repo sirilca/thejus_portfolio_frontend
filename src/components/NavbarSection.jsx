@@ -54,12 +54,12 @@ function NavbarSection({ executeScroll }) {
             Activities
           </a>
           <div onClick={() => nav('/about')} className="cursor-pointer">
-            <a
+            <h1
               
               className="text-black font-outfit hover:text-gray-600"
             >
               About
-            </a>
+            </h1>
           </div>
           
           {/* <a
@@ -70,12 +70,12 @@ function NavbarSection({ executeScroll }) {
             Contact
           </a> */} 
           <div onClick={() => nav('/contact')} className="cursor-pointer">
-            <a
+            <h1
               // href="/Contact"
               className="text-black font-outfit hover:text-gray-600"
             >
               Contact
-            </a>
+            </h1>
           </div>
            
         </div>
@@ -148,7 +148,7 @@ function NavbarSection({ executeScroll }) {
       {isMobileMenuOpen && (
         <div className="md:hidden m-5">
           <a
-            href="#Home"
+            href="/#Home"
             onClick={() => executeScroll("Home")}
             className="text-black font-outfit m-3 block hover:text-gray-600"
           >
@@ -156,7 +156,7 @@ function NavbarSection({ executeScroll }) {
           </a>
           <hr />
           <a
-            href="#projects"
+            href="#Meditation"
             onClick={() => executeScroll("Meditation")}
             className="text-black font-outfit m-3 block hover:text-gray-600"
           >
@@ -165,28 +165,28 @@ function NavbarSection({ executeScroll }) {
 
           <hr />
           <a
-            href="#projects"
+            href="#Activities"
             onClick={() => executeScroll("Activities")}
             className="text-black font-outfit m-3 block hover:text-gray-600"
           >
             Activities
           </a>
           <hr />
-          <a
-            href="/about"
+          <div
+            
             onClick={() => nav('/about')}
-            className="text-black font-outfit m-3 block hover:text-gray-600"
+            className="text-black font-outfit m-3 block hover:text-gray-600 cursor-pointer"
           >
             About
-          </a>
+          </div>
           <hr />
-          <a
-            href="/contact"
+          <div
+           
             onClick={() => nav('/Contact')}
-            className="text-black font-outfit m-3 block hover:text-gray-600"
+            className="text-black font-outfit m-3 block hover:text-gray-600 cursor-pointer"
           >
             Contact
-          </a>
+          </div>
         </div>
       )}
     </nav>
