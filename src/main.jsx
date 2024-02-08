@@ -4,13 +4,7 @@
 import "./index.css";
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
-import About from "./Pages/About.jsx";
-import Home from "./Pages/Home.jsx";
-import Post from "./Pages/Post.jsx";
-import { useEffect } from "react";
-import Contact from "./Pages/Contact.jsx";
-
+import { HashRouter, createBrowserRouter, RouterProvider } from "react-router-dom";
 import DataContext from "./components/DataContext/DataContext.jsx";
 import App from "./App.jsx";
 
@@ -20,10 +14,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* <App /> */}
     {/* <RouterProvider router={router} > */}
-    <BrowserRouter>
+    <HashRouter>
     <DataContext>
       <App/>
     </DataContext>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
