@@ -24,6 +24,15 @@ function NavbarSection({ executeScroll }) {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const gotoabout=()=>{
+    nav('/about')
+  }
+
+  const gotocontact = () => {
+    nav('/contact')
+  }
+
+
   return (
     <nav className="bg-[#f5f6f0] p-4 ">
       <div className="container mx-auto flex justify-between items-center">
@@ -53,7 +62,7 @@ function NavbarSection({ executeScroll }) {
           >
             Activities
           </a>
-          <div onClick={() => nav('/about')} className="cursor-pointer">
+          <div onClick={gotoabout} className="cursor-pointer">
             <h1
               
               className="text-black font-outfit hover:text-gray-600"
@@ -69,7 +78,7 @@ function NavbarSection({ executeScroll }) {
           >
             Contact
           </a> */} 
-          <div onClick={() => nav('/contact')} className="cursor-pointer">
+          <div onClick={gotocontact} className="cursor-pointer">
             <h1
               // href="/Contact"
               className="text-black font-outfit hover:text-gray-600"
@@ -174,7 +183,7 @@ function NavbarSection({ executeScroll }) {
           <hr />
           <div
             
-            onClick={() => nav('/about')}
+            onClick={gotoabout}
             className="text-black font-outfit m-3 block hover:text-gray-600 cursor-pointer"
           >
             About
@@ -182,7 +191,7 @@ function NavbarSection({ executeScroll }) {
           <hr />
           <div
            
-            onClick={() => nav('/Contact')}
+            onClick={gotocontact}
             className="text-black font-outfit m-3 block hover:text-gray-600 cursor-pointer"
           >
             Contact
